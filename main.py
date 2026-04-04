@@ -1,10 +1,25 @@
 class Book:
-    def __init__(self, title, author):
+    def __init__(self, title, author, year, is_available):
         self.title = title
         self.author = author
+        self.year = year
+        self.is_available = is_available
 
-first_book = Book("El padre Brown al completo", "G.K. Chesterton")
-second_book = Book("Más allá del orden", "Jordan B. Peterson")
+book_1 = Book(
+    "El padre Brown al completo",
+    "G.K. Chesterton",
+    "2017",
+    True
+)
 
-print(f"My book: {first_book.title} {first_book.author}")
-print(f"My book: {second_book.title} {second_book.author}")
+book_2 = Book(
+    "Más allá del orden",
+    "Jordan B. Peterson",
+    "2021",
+    False
+)
+
+catalog = [book_1, book_2]
+
+for x in catalog:
+    print(f"{x.title}, {x.author}. {x.year} - available: {x.is_available}")
