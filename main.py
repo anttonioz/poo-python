@@ -20,6 +20,12 @@ class Book:
         if self.is_available == False:
             self.is_available = True
 
+    def get_borrowed_times(self):
+        return self.__loan_counter
+
+    def set_borrowed_times(self, times):
+        self.__loan_counter = times
+
 book_1 = Book(
     "El padre Brown al completo",
     "G.K. Chesterton",
@@ -40,7 +46,11 @@ catalog = [book_1, book_2]
     print(f"{x.title}, {x.author}. {x.year} - available: {x.is_available}")
 """
 
+book_1.set_borrowed_times(5)
+print(book_1.get_borrowed_times())
+
 print(book_1.lend())
 book_1.give_back()
 print(book_1.lend())
-print(book_1.__loan_counter)
+print(book_1.get_borrowed_times())
+# print(book_1.__loan_counter)
