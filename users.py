@@ -47,4 +47,10 @@ print(student_1.request_book("Psicoplogía"))
 print(student_1.request_book("Padre Brown"))
 
 # Teacher
-# teacher_1 = Student("Jhon", "1234", "Engineering")
+teacher_1 = Teacher("Oswaldo", "Chemical")
+
+print(teacher_1.request_book("Sócrates"))
+print(teacher_1.request_book("La Biblia"))
+print(teacher_1.request_book("Psicoplogía"))
+print(teacher_1.request_book("Padre Brown"))
+print(teacher_1.request_book("Chemical II"))
